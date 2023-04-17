@@ -26,6 +26,7 @@
             <Label 
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
+                LineBreakMode="WordWrap"
                 Style="{StaticResource IntroPageHeaderStyle}"
                 Text="Cooking Experience Like a Chef"/>
 
