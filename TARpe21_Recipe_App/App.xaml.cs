@@ -30,4 +30,15 @@ public partial class App : Application
 
 		MainPage = new NavigationPage(new View.StartPage());
 	}
+
+	protected override Window CreateWindow(IActivationState activationState)
+	{
+		var window = base.CreateWindow(activationState);
+		if (window != null)
+		{
+			window.Title = "Recipe App";
+		}
+
+		return window;
+	}
 }
