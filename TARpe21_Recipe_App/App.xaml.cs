@@ -36,7 +36,7 @@ public partial class App : Application
 		var window = base.CreateWindow(activationState);
 		if (window != null)
 		{
-			window.Title = "Recipe App";
+			window.Title = " Recipe App";
 		}
 
 		return window;
