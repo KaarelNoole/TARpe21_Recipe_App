@@ -1,4 +1,5 @@
-using Views;
+using RecipeApp;
+using RecipeApp.Pages;
 
 namespace View;
 
@@ -10,5 +11,5 @@ public partial class StartPage : ContentPage
 	}
 
 	async void GetStarted_Clicked(System.Object sender, System.EventArgs e)
-		=> Application.Current.MainPage = new NavigationPage(new RecipePage());
+		=> Application.Current.MainPage = new NavigationPage(new MainPage());
 }
