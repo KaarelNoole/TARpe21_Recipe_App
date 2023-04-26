@@ -88,5 +88,23 @@ namespace Services
 
 
         };
+
+        public static List<Recipe> GetAllRecipes()
+        {
+            return recipes;
+        }
+
+        public static Recipe GetRecipe(string recipeName)
+        {
+            return recipes.Where(_recipe => _recipe.Name == recipeName).FirstOrDefault();
+        }
+
+        public static List<Recipe> GetFeaturedRecipes()
+        {
+            var rnd = new Random();
+            var randomizedRecipes = recipes.OrderBy(item => rnd.Next());
+
+            return randomizedRecipes.Take(3).ToList();
+        }
     }
 }

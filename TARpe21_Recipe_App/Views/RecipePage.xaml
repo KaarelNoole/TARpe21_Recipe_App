@@ -1,8 +1,85 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Models"
              x:Class="Views.RecipePage"
              Title="RecipePage">
 
-    
+    <!--Main Content-->
+    <Grid
+        x:Name="MainContentGrid"
+        Padding="24,52,24,0"
+        BackgroundColor="{StaticResource PageBackgroundColor}"
+        ColumnDefinitions="*,Auto"
+        RowDefinitions="Auto,*">
+
+        <!--Header Text-->
+        <VerticalStackLayout
+            Spacing="4"
+            Grid.Row="0"
+            Grid.Column="0"
+            VerticalOptions="Center">
+
+            <Label
+                Style="{StaticResource PageHeaderStyle}"
+                Text="All Recipes are here"/>
+
+        </VerticalStackLayout>
+        
+        <CollectionView
+            x:Name="lstAllRecipes"
+            HeightRequest="160"
+            SelectionMode="Single"
+            SelectionChanged="Recipes_SelectionChanged">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Horizontal"
+                    ItemSpacing="16" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate
+                    x:DataType="models:Recipe">
+                    <Border
+                        VerticalOptions="Fill"
+                        WidthRequest="140"
+                        StrokeThickness="0"
+                        Padding="16">
+
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="16"/>
+                        </Border.StrokeShape>
+
+                        <Grid
+                            RowDefinitions="*,Auto,Auto"
+                            RowSpacing="4">
+
+                            <Image
+                                Grid.Row="0"
+                                Source="{Binding HImage}"
+                                Rotation="-30"
+                                Aspect="AspectFit"
+                                VerticalOptions="Fill"
+                                HorizontalOptions="Fill" />
+
+                            <Label
+                                Grid.Row="1"
+                                Style="{StaticResource AllRecipeHeaderStyle}"
+                                Text="{Binding Name}"
+                                Margin="0,4,0,0" />
+
+                            <Label
+                                Grid.Row="2"
+                                Style="{StaticResource AllRecipeHeaderStyle}"
+                                Text="{Binding TotalTime}"
+                                Margin="0,4,0,0" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+
+    </Grid>
+
 </ContentPage>
