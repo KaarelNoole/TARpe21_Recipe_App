@@ -58,8 +58,9 @@
                 <!--Recipe Name-->
                 <Label
                     Margin="0,-24,0,0"
-                    Style="{StaticResource AllRecipeHeaderSubtitleStyle}"
+                    Style="{StaticResource RecipeHeaderStyle}"
                     Text="{Binding Name}" />
+                
 
                 <!--Recipe Subtitle-->
                 <Label
@@ -89,12 +90,6 @@
                     HeightRequest="2"
                     Stroke="Transparent"
                     Fill="{StaticResource LightBorderColor}" />
-
-                <!--Recipe Image-->
-
-                <Label
-                    Style="{StaticResource RecipeHeaderSubtitleStyle}"
-                    Text="Gallery" />
 
                 <CollectionView
                     Margin="0,-6,0,0"

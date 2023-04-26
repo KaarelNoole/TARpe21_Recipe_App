@@ -56,7 +56,7 @@
 
                             <Image
                                 Grid.Row="0"
-                                Source="{Binding HImage}"
+                                Source="{Binding HeroImage}"
                                 Rotation="-30"
                                 Aspect="AspectFit"
                                 VerticalOptions="Fill"
