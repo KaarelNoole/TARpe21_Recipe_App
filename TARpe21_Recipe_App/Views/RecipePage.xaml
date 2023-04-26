@@ -3,6 +3,105 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Views.RecipePage"
              Title="RecipePage">
-
     
+    
+    <!--Main Content-->
+    <Grid
+        x:Name="MainContentGrid"
+        Padding="24,52,24,0"
+        BackgroundColor="{StaticResource PageBackgroundColor}"
+        ColumnDefinitions="*,Auto"
+        RowDefinitions="Auto,*">
+        
+        <!--Header Text-->
+        <VerticalStackLayout
+            Spacing="4"
+            Grid.Row="0"
+            Grid.Column="0"
+            VerticalOptions="Center">
+
+            <Label
+                Style="{StaticResource PageHeaderStyle}"
+                Text="All Recipes are here"/>
+            
+        </VerticalStackLayout>
+
+        <ScrollView
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalScrollBarVisibility="Never"
+            VerticalScrollBarVisibility="Never"
+            Margin="0,32,-24,0">
+
+            <VerticalStackLayout
+                Spacing="12">
+                
+                <!--Search Box-->
+                
+                <!--<SearchBar
+            Grid.Row="0"
+            Grid.Column="0"
+            Placeholder="Search Recipes"
+            TextChanged="SearchBar_TextChanged"></SearchBar>-->
+
+        <CollectionView
+            x:Name="lstAllRecipe"
+            HeightRequest="160">
+            <!--SelectionMode="Single"-->
+            <!--SelectionChanged="Recipe_SelectionChanged"-->
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout
+                    Orientation="Horizontal"
+                    ItemSpacing="16" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <!--x:DataType="models:Recipe">-->
+                    <Border
+                        VerticalOptions="Fill"
+                        WidthRequest="140"
+                        StrokeThickness="0"
+                        Background="{Binding Background}"
+                        Padding="16">
+
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="16"/>
+                        </Border.StrokeShape>
+
+                        <Grid
+                            RowDefinitions="*,Auto,Auto"
+                            RowSpacing="4">
+
+                            <Image
+                                Grid.Row="0"
+                                Source="{Binding HeroImage}"
+                                Rotation="-30"
+                                Aspect="AspectFit"
+                                VerticalOptions="Fill"
+                                HorizontalOptions="Fill" />
+
+                            <Label
+                                Grid.Row="1"
+                                Style="{StaticResource AllPlanetHeaderStyle}"
+                                Text="{Binding Name}"
+                                Margin="0,4,0,0" />
+                            
+                            <Label
+                                Grid.Row="2"
+                                Style="{StaticResource AllPlanetHeaderStyle}"
+                                Text="{Binding TotalTime}"
+                                Margin="0,4,0,0" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+      </VerticalStackLayout>
+            
+    </ScrollView>
+        
+    </Grid>
 </ContentPage>
