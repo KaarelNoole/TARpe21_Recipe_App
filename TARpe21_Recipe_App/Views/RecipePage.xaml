@@ -84,6 +84,7 @@
                                 x:DataType="models:Recipe">
                                 <Border
                                     VerticalOptions="Fill"
+                                    HeightRequest="140"
                                     WidthRequest="140"
                                     StrokeThickness="0"
                                     Padding="16">

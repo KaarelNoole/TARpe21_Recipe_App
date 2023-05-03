@@ -9,12 +9,29 @@
     <Grid
         IgnoreSafeArea="{OnPlatform Android=False, iOS=True}">
 
-        <Image
-            x:Name="imgBackground"
-            Source="background.jpg"
-            Aspect="AspectFill"
-            VerticalOptions="FillAndExpand"
-            HorizontalOptions="FillAndExpand"/>
+        <Image 
+            Source="background.png"
+            Aspect="Center">
+        </Image>
+        <Grid>
+            <Image 
+                VerticalOptions="Start"
+                Margin="0,100,0,0"
+                Source="c64.png"                  
+                HeightRequest="300" 
+                WidthRequest="300">
+                <Image.Clip>
+                    <RoundRectangleGeometry CornerRadius="20" Rect="0,0,300,300" />
+                </Image.Clip>
+                <Image.Shadow>
+                    <Shadow 
+                        Brush="Black"
+                        Offset="0,0"
+                        Radius="20"
+                        Opacity="0.5" />
+                </Image.Shadow>
+            </Image>
+        </Grid>
 
 
         <!--Intro Text-->

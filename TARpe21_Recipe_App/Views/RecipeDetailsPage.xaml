@@ -49,11 +49,11 @@
 
                 <!--Recipe image-->
                 <Image
+                    Grid.RowSpan="2"
                     Source="{Binding HeroImage}"
-                    Aspect="AspectFit"
-                    HorizontalOptions="Fill"
-                    HeightRequest="240"
-                    Margin="24,0" />
+                    Aspect="AspectFill"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand" />
 
                 <!--Recipe Name-->
                 <Label

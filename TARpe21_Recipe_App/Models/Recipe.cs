@@ -12,6 +12,7 @@ namespace Models
         public string TotalTime { get; set; }
         public string Description { get; set; }
         public string Ingredients { get; set; }
+
         public List<string> Images { get; set; }
     }
 }
