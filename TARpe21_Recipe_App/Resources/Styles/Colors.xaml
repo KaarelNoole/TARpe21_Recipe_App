@@ -11,5 +11,6 @@
     <Color x:Key="BorderColor">Transparent</Color>
     <Color x:Key="LightBorderColor">#d5d5d5</Color>
     <Color x:Key="LightTextColor">#d5d5d5</Color>
-    <Color x:Key="DarkTextColor">#252525</Color>
+    <Color x:Key="MainPageTextColor">#d5d5d5</Color>
+    <Color x:Key="DarkTextColor">#000000</Color>
 </ResourceDictionary>

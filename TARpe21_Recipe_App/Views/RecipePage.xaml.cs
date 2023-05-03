@@ -15,7 +15,7 @@ public partial class RecipePage : ContentPage
 	{
 		base.OnAppearing();
 
-		lstAllRecipes.ItemsSource = RecipeService.GetAllRecipes();
+		lstAllRecipe.ItemsSource = RecipeService.GetAllRecipes();
 	}
 
 	async void Recipes_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
