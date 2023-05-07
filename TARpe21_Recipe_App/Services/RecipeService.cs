@@ -17,8 +17,7 @@ namespace TARpe21_Recipe_App.Services
                 HeroImage = "chickenfaij.jpg",
                 TotalTime = "   30 min",
                 Ingredients = "All you need is chicken, bell pepper, onion, lime juice and spices, plus tortillas and your favorite toppings. It’s incredibly easy.",
-                Description = "1. Season the chicken. " +
-                "2. Generously sprinkle the fajita seasoning on both sides of the chicken and use your fingers to press it in.\r\n 3. Cook the chicken. Heat a large skillet over medium heat and lightly coat it with a drizzle of olive oil or avocado oil. Sear the chicken breasts for about 7-8 minutes on each side. Then remove them from the pan and let them rest for a few minutes before slicing into strips.\r\n 4. Saute the bell peppers and onion. While the chicken is cooking, cut the bell peppers and onions into thin slices. Then saute them in the same skillet over medium heat for a few minutes until caramelized. You’re essentially making fajita veggies.\r\n 5. Mix together. Add the chicken back into the skillet, squeeze fresh lime juice on top and stir everything together.\r\n 6. Wrap it up. Serve immediately with tortillas and extra toppings.\r\n"
+                Description = ""
 ,
 
             },
@@ -50,7 +49,7 @@ namespace TARpe21_Recipe_App.Services
                 HeroImage="pasta.jpg",
                 TotalTime = "  30 min",
                 Ingredients = "Penne pasta\r\n Yellow onion\r\n Cloves garlic\r\n Olive oil\r\n Can diced tomatoes\r\n Dried oregano\r\n Dried basil\r\n Crushed red pepper\r\n Salt\r\nfreshly cracked black pepper to taste ($0.03)\r\n Tomato paste\r\n Cream cheese\r\n grated Parmesan\r\n Fresh spinach",
-                Description= "Bring a large pot of water to a boil over high heat. Add the pasta and continue to boil until tender (7-10 minutes). Drain the pasta in a colander.\r\nWhile the pasta is cooking, prepare the creamy tomato sauce. Dice the onion and mince the garlic. Add the onion, garlic, and olive oil to a large skillet and sauté over medium heat until the onions are soft and translucent (3-5 minutes).\r\nAdd the diced tomatoes (with juices), oregano, basil, crushed red pepper, salt, and some freshly cracked pepper to the skillet. Stir to combine. Add the tomato paste and a 1/2 cup of water to the skillet and stir until the tomato paste has mixed into the sauce.\r\nTurn the heat down to low. Cut the cream cheese into a few pieces and then add them to the skillet with the tomato sauce. Use a whisk to stir the sauce until the cream cheese has fully melted and the sauce is creamy. Add the Parmesan to the skillet and stir until it is melted into the sauce.\r\nAdd the fresh spinach to the skillet and gently stir it into the sauce until it has wilted (2-3 minutes). Add the pasta and stir until it is well coated in the creamy tomato sauce. Taste and adjust the salt and pepper as needed. Serve warm.",
+                //Description= 
             
             },
 

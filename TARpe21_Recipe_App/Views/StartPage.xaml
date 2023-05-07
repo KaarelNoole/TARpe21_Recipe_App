@@ -10,14 +10,14 @@
         IgnoreSafeArea="{OnPlatform Android=False, iOS=True}">
 
         <Image 
-            Source="background.png"
+            Source="background.jpg"
             Aspect="Center">
         </Image>
         <Grid>
             <Image 
                 VerticalOptions="Start"
                 Margin="0,100,0,0"
-                Source="c64.png"                  
+                Source="background.jpg"                  
                 HeightRequest="300" 
                 WidthRequest="300">
                 <Image.Clip>

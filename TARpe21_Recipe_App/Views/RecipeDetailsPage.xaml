@@ -6,8 +6,8 @@
 
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#666" Offset="0.0" />
-            <GradientStop Color="#000" Offset="1.0" />
+            <GradientStop Color="#F1EFF0" Offset="0.0" />
+            <GradientStop Color="#F1EFF0" Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
 
@@ -15,25 +15,6 @@
         Margin="24,52,24,0"
         ColumnDefinitions="*,*"
         RowDefinitions="Auto,*">
-
-        <ImageButton 
-            WidthRequest="24"
-            HeightRequest="24"
-            Source="imgback.png"
-            Grid.Row="0"
-            Grid.Column="0"
-            HorizontalOptions="Start"
-            VerticalOptions="Center"
-            Clicked="BackButton_Clicked" />
-
-        <ImageButton
-            WidthRequest="24"
-            HeightRequest="24"
-            Source="imgmenu.png"
-            Grid.Row="0"
-            Grid.Column="1"
-            HorizontalOptions="End"
-            VerticalOptions="Center" />
 
         <!--Main content scrollview-->
         <ScrollView
@@ -57,7 +38,7 @@
 
                 <!--Recipe Name-->
                 <Label
-                    Margin="0,-24,0,0"
+                    Margin="0,-14,0,0"
                     Style="{StaticResource RecipeHeaderStyle}"
                     Text="{Binding Name}" />
                 

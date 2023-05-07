@@ -9,21 +9,7 @@
 
     <Grid>
 
-        <!-- Menu Grid -->
-        <Grid
-            x:Name="MenuContainer"
-            IgnoreSafeArea="{OnPlatform Android=False, iOS=True}">
-
-            <Grid.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#666666" Offset="0.0" />
-                    <GradientStop Color="#000000" Offset="1.0"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-
-
-        </Grid>
-
+       
         <!-- Main Content -->
         <Grid
             x:Name="MainContentGrid"
@@ -61,8 +47,8 @@
                         Margin="0,12,0,0">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text=" Popular "  />
-                                <Span Text="→" FontSize="20" />
+                                <Span Text=" Popular " FontSize="25"  />
+                                <Span Text="→" FontSize="25" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -75,17 +61,17 @@
 
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout
-                                Orientation="Horizontal"
-                                ItemSpacing="16" />
+                                Orientation="Vertical"
+                                ItemSpacing="32" />
                         </CollectionView.ItemsLayout>
 
                         <CollectionView.ItemTemplate>
                             <DataTemplate
                                 x:DataType="models:Recipe">
                                 <Border
-                                    VerticalOptions="Fill"
-                                    HeightRequest="140"
-                                    WidthRequest="140"
+                                    VerticalOptions="Center"
+                                    HeightRequest="280"
+                                    WidthRequest="280"
                                     StrokeThickness="0"
                                     Padding="16">
 
@@ -106,13 +92,13 @@
 
                                         <Label
                                             Grid.Row="1"
-                                            Style="{StaticResource AllPlanetHeaderStyle}"
+                                            Style="{StaticResource BaseMediumLabelStyle}"
                                             Text="{Binding Name}"
                                             Margin="0,4,0,0"/>
 
                                         <Label
                                             Grid.Row="2"
-                                            Style="{StaticResource AllPlanetHeaderStyle}"
+                                            Style="{StaticResource BaseMediumLabeltyle}"
                                             Text="{Binding TotalTime}"
                                             Margin="0,2,0,0" />
 
