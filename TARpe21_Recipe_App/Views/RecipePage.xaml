@@ -14,7 +14,7 @@
         <Grid
             x:Name="MainContentGrid"
             Padding="24,52,24,0"
-            BackgroundColor="{StaticResource PageBackgroundColor}"
+            BackgroundColor="{StaticResource PageBackgroundColor2}"
             ColumnDefinitions="*,Auto"
             RowDefinitions="Auto,*">
 
@@ -34,13 +34,13 @@
             <ScrollView
                 Grid.Row="1"
                 Grid.Column="0"
-                Grid.ColumnSpan="2"
+                Grid.ColumnSpan="4"
                 HorizontalScrollBarVisibility="Never"
                 VerticalScrollBarVisibility="Never"
                 Margin="0,32,-24,0">
 
                 <VerticalStackLayout
-                    Spacing="12">
+                    Spacing="24">
                     <!-- More Section -->
                     <Label
                         Style="{StaticResource PageSubHeaderStyle}"
@@ -55,7 +55,7 @@
 
                     <CollectionView
                         x:Name="lstAllRecipe"
-                        HeightRequest="160"
+                        HeightRequest="1000"
                         SelectionMode="Single"
                         SelectionChanged="Recipes_SelectionChanged">
 
@@ -69,11 +69,11 @@
                             <DataTemplate
                                 x:DataType="models:Recipe">
                                 <Border
-                                    VerticalOptions="Center"
-                                    HeightRequest="280"
-                                    WidthRequest="280"
+                                    VerticalOptions="Fill"
+                                    HeightRequest="560"
+                                    WidthRequest="560"
                                     StrokeThickness="0"
-                                    Padding="16">
+                                    Padding="32">
 
                                     <Border.StrokeShape>
                                         <RoundRectangle CornerRadius="16"/>
@@ -86,21 +86,9 @@
                                         <Image
                                             Grid.Row="0"
                                             Source="{Binding HeroImage}"
-                                            Aspect="AspectFit"                                        
-                                            VerticalOptions="Fill"
-                                            HorizontalOptions="Fill"/>
-
-                                        <Label
-                                            Grid.Row="1"
-                                            Style="{StaticResource BaseMediumLabelStyle}"
-                                            Text="{Binding Name}"
-                                            Margin="0,4,0,0"/>
-
-                                        <Label
-                                            Grid.Row="2"
-                                            Style="{StaticResource BaseMediumLabeltyle}"
-                                            Text="{Binding TotalTime}"
-                                            Margin="0,2,0,0" />
+                                            Aspect="AspectFill"                                        
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Center"/>
 
                                     </Grid>
 
