@@ -12,7 +12,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>TARpe21_Recipe_App</ApplicationTitle>
+		<ApplicationTitle>Recipe App</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.tarpe21_recipe_app</ApplicationId>
@@ -34,8 +34,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
-
+		<MauiIcon Include="Resources\AppIcon\icon.svg"></MauiIcon>
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
@@ -50,20 +49,32 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.UI.Xaml" Version="2.8.2" />
+	  <None Remove="Resources\AppIcon\icon.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="DocumentFormat.OpenXml" Version="2.20.0" />
+	  <PackageReference Include="Microsoft.UI.Xaml" Version="2.8.2" />
+	  
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\RecipeDetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\RecipePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\StartPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Templates\CategoryItemTemplate.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Resources\Images\" />
+	  <Folder Include="Resources\AppIcon\" />
 	</ItemGroup>
 
 </Project>

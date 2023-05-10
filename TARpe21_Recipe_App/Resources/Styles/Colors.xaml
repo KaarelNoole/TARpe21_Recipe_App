@@ -5,11 +5,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <!--Colors-->
-    <Color x:Key="PageBackgroundColor">#191932</Color>
+    <Color x:Key="PageBackgroundColor">#F1EFF0</Color>
+    <Color x:Key="PageBackgroundColor2">#808080</Color>
     <Color x:Key="FrameBackgroundColor">#F1EFF0</Color>
-    <Color x:Key="ButtonBackgroundColor">#eb5757</Color>
+    <Color x:Key="ButtonBackgroundColor">#808080</Color>
     <Color x:Key="BorderColor">Transparent</Color>
-    <Color x:Key="LightBorderColor">#d5d5d5</Color>
+    <Color x:Key="LightBorderColor">#F1EFF0</Color>
     <Color x:Key="LightTextColor">#d5d5d5</Color>
-    <Color x:Key="DarkTextColor">#252525</Color>
+    <Color x:Key="MainPageTextColor">#d5d5d5</Color>
+    <Color x:Key="DarkTextColor">#000000</Color>
 </ResourceDictionary>

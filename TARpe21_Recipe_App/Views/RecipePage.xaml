@@ -1,8 +1,108 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Models"
              x:Class="Views.RecipePage"
              Title="RecipePage">
 
-    
+
+
+    <Grid>
+
+       
+        <!-- Main Content -->
+        <Grid
+            x:Name="MainContentGrid"
+            Padding="24,52,24,0"
+            BackgroundColor="{StaticResource PageBackgroundColor2}"
+            ColumnDefinitions="*,Auto"
+            RowDefinitions="Auto,*">
+
+            <!-- Header Text -->
+            <VerticalStackLayout
+                Spacing="4"
+                Grid.Row="0"
+                Grid.Column="0"
+                VerticalOptions="Center">
+
+                <!--<Label
+                    Style="{StaticResource PageHeaderStyle}"
+                    Text="All Recipes are here"/>-->
+            </VerticalStackLayout>
+
+            <!-- Main Content ScrollView -->
+            <ScrollView
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="4"
+                HorizontalScrollBarVisibility="Never"
+                VerticalScrollBarVisibility="Never"
+                Margin="0,32,-24,0">
+
+                <VerticalStackLayout
+                    Spacing="24">
+                    <!-- More Section -->
+                    <Label
+                        Style="{StaticResource PageSubHeaderStyle}"
+                        Margin="0,12,0,0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text=" Popular " FontSize="25"  />
+                                <Span Text="→" FontSize="25" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                    <CollectionView
+                        x:Name="lstAllRecipe"
+                        HeightRequest="1000"
+                        SelectionMode="Single"
+                        SelectionChanged="Recipes_SelectionChanged">
+
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout
+                                Orientation="Vertical"
+                                ItemSpacing="32" />
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate
+                                x:DataType="models:Recipe">
+                                <Border
+                                    VerticalOptions="Fill"
+                                    HeightRequest="500"
+                                    WidthRequest="560"
+                                    StrokeThickness="0"
+                                    Padding="32">
+
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="16"/>
+                                    </Border.StrokeShape>
+
+                                    <Grid
+                                        RowDefinitions="*,Auto,Auto"
+                                        RowSpacing="4">
+
+                                        <Image
+                                            Grid.Row="0"
+                                            Source="{Binding HeroImage}"
+                                            Aspect="AspectFill"                                        
+                                            VerticalOptions="Fill"
+                                            HorizontalOptions="Fill"/>
+
+                                    </Grid>
+
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+
+                </VerticalStackLayout>
+
+            </ScrollView>
+
+        </Grid>
+
+    </Grid>
 </ContentPage>

@@ -116,32 +116,32 @@
 
     <Style TargetType="Label" x:Key="PageHeaderSubtitleStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
         <Setter Property="FontSize" Value="14" />
-        <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        <Setter Property="TextColor" Value="{StaticResource DarkTextColor}"/>
     </Style>
 
     <Style TargetType="Label" x:Key="PageSubHeaderStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
         <Setter Property="FontSize" Value="20" />
-        <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        <Setter Property="TextColor" Value="{StaticResource PageBackgroundColor}" />
     </Style>
 
-    <Style TargetType="Label" x:Key="FeaturedPlanetHeaderStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
+    <Style TargetType="Label" x:Key="FeaturedRecipeHeaderStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
         <Setter Property="FontSize" Value="22" />
-        <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
     </Style>
 
-    <Style TargetType="Label" x:Key="FeaturedPlanetHeaderSubtitleStyle" BasedOn="{StaticResource BaseRegularLabeltyle}">
+    <Style TargetType="Label" x:Key="FeaturedRecipeHeaderSubtitleStyle" BasedOn="{StaticResource BaseRegularLabeltyle}">
         <Setter Property="FontSize" Value="14" />
-        <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
     </Style>
 
-    <Style TargetType="Label" x:Key="PlanetHeaderStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
+    <Style TargetType="Label" x:Key="RecipeHeaderStyle" BasedOn="{StaticResource BaseMediumLabeltyle}">
         <Setter Property="FontSize" Value="18" />
-        <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
     </Style>
 
-    <Style TargetType="Label" x:Key="PlanetHeaderSubtitleStyle" BasedOn="{StaticResource BaseRegularLabeltyle}">
+    <Style TargetType="Label" x:Key="RecipeHeaderSubtitleStyle" BasedOn="{StaticResource BaseRegularLabeltyle}">
         <Setter Property="FontSize" Value="12" />
-        <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
     </Style>
 
     <Style TargetType="Label" x:Key="MenuLabelStyle" BasedOn="{StaticResource BaseRegularLabeltyle}">
@@ -149,19 +149,19 @@
         <Setter Property="TextColor" Value="#CCCCCC" />
     </Style>
 
-    <Style TargetType="Label" x:Key="AllPlanetHeaderStyle" BasedOn="{StaticResource BaseBoldLabeltyle}">
+    <Style TargetType="Label" x:Key="AllRecipeHeaderStyle" BasedOn="{StaticResource BaseBoldLabeltyle}">
         <Setter Property="FontSize" Value="48" />
-        <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
     </Style>
 
-    <Style TargetType="Label" x:Key="AllPlanetHeaderSubtitleStyle" BasedOn="{StaticResource BaseRegularLabeltyle}">
+    <Style TargetType="Label" x:Key="AllRecipeHeaderSubtitleStyle" BasedOn="{StaticResource BaseRegularLabeltyle}">
         <Setter Property="FontSize" Value="22" />
-        <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
     </Style>
 
-    <Style TargetType="Label" x:Key="PlanetDetailsTextStyle" BasedOn="{StaticResource BaseRegularLabeltyle}">
+    <Style TargetType="Label" x:Key="RecipeDetailsTextStyle" BasedOn="{StaticResource BaseRegularLabeltyle}">
         <Setter Property="FontSize" Value="16" />
-        <Setter Property="TextColor" Value="{StaticResource LightTextColor}" />
+        <Setter Property="TextColor" Value="{StaticResource DarkTextColor}"/>
     </Style>
 
 
