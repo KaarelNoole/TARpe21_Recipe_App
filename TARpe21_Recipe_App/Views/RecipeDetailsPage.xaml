@@ -6,7 +6,7 @@
 
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#F1EFF0" Offset="0.0" />
+            <GradientStop Color="#808080" Offset="0.0" />
             <GradientStop Color="#F1EFF0" Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
@@ -15,6 +15,7 @@
         Margin="24,52,24,0"
         ColumnDefinitions="*,*"
         RowDefinitions="Auto,*">
+
 
         <!--Main content scrollview-->
         <ScrollView
@@ -35,19 +36,26 @@
                     Aspect="AspectFill"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand" />
+                <Rectangle
+                    HorizontalOptions="Fill"
+                    HeightRequest="2"
+                    Stroke="Transparent"
+                    Fill="{StaticResource LightBorderColor}" />
 
                 <!--Recipe Name-->
                 <Label
-                    Margin="0,-14,0,0"
+                    Margin="0,-6,0,0"
+                    FontSize="24"
                     Style="{StaticResource RecipeHeaderStyle}"
                     Text="{Binding Name}" />
                 
 
                 <!--Recipe Subtitle-->
                 <Label
-                    Margin="0,-12,0,0"
+                    Margin="6,-12,0,0"
                     Style="{StaticResource RecipeHeaderSubtitleStyle}"
-                    Text="{Binding Subtitle}" />
+                    Text="{Binding Ingredients}"
+                    FontSize="14"/>
 
                 <!--Divider-->
 
@@ -63,6 +71,7 @@
                     LineBreakMode="WordWrap"
                     Style="{StaticResource RecipeDetailsTextStyle}"
                     Text="{Binding Description}" />
+                
 
                 <!--Divider-->
 
@@ -71,32 +80,17 @@
                     HeightRequest="2"
                     Stroke="Transparent"
                     Fill="{StaticResource LightBorderColor}" />
+                
+                <!--Divider-->
+                
+                <Label
+                    Margin="64,-12,0,0"
+                    Style="{StaticResource RecipeHeaderSubtitleStyle}"
+                    Text="{Binding TotalTime}"
+                    FontSize="30"/>
 
-                <CollectionView
-                    Margin="0,-6,0,0"
-                    HeightRequest="400"
-                    WidthRequest="400"
-                    ItemsSource="{Binding Images}">
 
-                    <CollectionView.ItemsLayout>
-                        <LinearItemsLayout
-                            Orientation="Vertical"
-                            ItemSpacing="16">
-                        </LinearItemsLayout>
-                    </CollectionView.ItemsLayout>
 
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Image
-                                Source="{Binding .}"
-                                Aspect="AspectFill"
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center">
-                            </Image>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-
-                </CollectionView>
 
             </VerticalStackLayout>
 
